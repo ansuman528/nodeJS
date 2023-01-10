@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body onload="create()">
+    <h1>NASA's Picture of the day</h1>
+    <span id="demo"></span><br>
+    <span id="url">this sentence will change</span>
+</body>
+<script>
+    function load(){
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            document.getElementById('url').innerHTML = this.responseText;
+            let id = document.getElementById('demo');
+            let field = document.createElement('img');
+            field.id = 'img';
+            field.height = '500';
+            field.width = '500';  
+            id.appendChild(field);
+            document.getElementById('img').src = this.responseText;
+        }
+        xhttp.open("GET", "http://localhost:8082/");
+        xhttp.send();
+    }
+    async function create()
+    {
+        document.getElementById('url').innerHTML = 'Loading......'
+        load();
+    }
+</script>
+</html>
