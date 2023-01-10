@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "locator",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansuman528/nodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansuman528/nodeJS/issues"
+  },
+  "homepage": "https://github.com/ansuman528/nodeJS#readme",
+  "dependencies": {
+    "node": "^19.3.0"
+  }
+}
